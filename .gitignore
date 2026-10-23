@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.secrets/
+.env
+results/private/
+*.log

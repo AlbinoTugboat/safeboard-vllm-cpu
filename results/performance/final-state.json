@@ -1,0 +1,43 @@
+{
+  "checked_at_utc": "2026-10-21T12:36:22.447586+00:00",
+  "status": "experiments_stopped",
+  "active_model": "BF16",
+  "source_configuration_matches_deployment": true,
+  "temporary_job_and_configmap_absent": true,
+  "endpoint_binding_request_id": "c576a753b7ac41e5b56377bd2c0d6092",
+  "api_credential_absent_from_deliverables": true,
+  "runtime_environment": {
+    "API_TOKEN_FILE": "/secrets/api-token",
+    "HF_TOKEN_FILE": "/secrets/hf-token",
+    "KMP_BLOCKTIME": "0",
+    "MKL_NUM_THREADS": "8",
+    "MODEL_LOCK_PATH": "/config/model.lock.json",
+    "MODEL_STORAGE_DIR": "/models",
+    "OMP_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VLLM_CPU_OMP_THREADS_BIND": "nobind"
+  },
+  "server_snapshot": {
+    "context": "safeboard",
+    "namespace": "safeboard-llm",
+    "pod_name": "vllm-7f74dd6d7d-wtx8f",
+    "pod_uid": "06f06332-7f93-4370-8bea-f32e23e144ba",
+    "image": "safeboard-vllm:0.32.0",
+    "image_id": "sha256:cda156f6259ce6e3b5932cc5911183cf47c23691cc8e4e71a534857c905e8b0f",
+    "restart_count": 0,
+    "resources": {
+      "limits": {
+        "cpu": "10",
+        "memory": "12Gi"
+      },
+      "requests": {
+        "cpu": "8",
+        "memory": "8Gi"
+      }
+    },
+    "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+    "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+    "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+    "container_spec_sha256": "6d5f1b43db7d2222e9821ab929ff08f5c88fde85220e8c43a8c38509740400f9"
+  }
+}

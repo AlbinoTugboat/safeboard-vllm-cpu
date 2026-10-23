@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-23",
+  "author": "Чураков Н.М.",
+  "repository": "https://github.com/AlbinoTugboat/safeboard-vllm-cpu",
+  "status": "passed",
+  "linux_tests": {
+    "passed": 48,
+    "skipped": 0
+  },
+  "final_clean_install": "passed; results/final-acceptance.json",
+  "kustomize_render": "passed",
+  "python_syntax_files": 19,
+  "json_files_parsed_before_finalization": 29,
+  "secret_scan": {
+    "tool": "Trivy 0.76.1",
+    "findings": 0
+  },
+  "scope": "Local CPU Minikube submission; all mandatory requirements and three bonuses implemented",
+  "remaining_risks": "See REPORT.md and results/security-fixes.md; benchmark is from 2026-10-21",
+  "build_reproducibility": "Pinned Python/model/base images; Docker build cache allowed; apt inputs are mutable",
+  "temporary_profile_removed": true,
+  "original_profile": "safeboard: stopped",
+  "runtime_secrets_or_weights_in_submission": false
+}

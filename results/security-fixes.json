@@ -1,0 +1,156 @@
+{
+  "before": {
+    "context": "safeboard",
+    "namespace": "safeboard-llm",
+    "pod_name": "vllm-754bbd4bfd-w4hp7",
+    "pod_uid": "e9025a00-3a28-4140-80f9-956d5654a671",
+    "image": "safeboard-vllm:0.32.0",
+    "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+    "restart_count": 0,
+    "resources": {
+      "limits": {
+        "cpu": "10",
+        "memory": "12Gi"
+      },
+      "requests": {
+        "cpu": "8",
+        "memory": "8Gi"
+      }
+    },
+    "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+    "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+    "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+    "container_spec_sha256": "10f7ee3c298032d5e0b74113d1a0f80cd3646cdfa34aa50020e20be524af11c0"
+  },
+  "first_runtime": {
+    "private_model_in_process_args": true,
+    "private_snapshot_valid": true,
+    "snapshot_files": [
+      "config.json",
+      "generation_config.json",
+      "merges.txt",
+      "model.safetensors",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ],
+    "snapshot_bytes": 3098955668,
+    "uid": 10001,
+    "pip_present": false,
+    "ensurepip_present": false
+  },
+  "first_endpoint": {
+    "authentication": "passed",
+    "inference": "passed",
+    "private_content_absent_from_logs": "passed",
+    "success_and_error_requests_audited": "passed",
+    "output_tokens": 28
+  },
+  "init_used_verified_local_cache": true,
+  "after": {
+    "context": "safeboard",
+    "namespace": "safeboard-llm",
+    "pod_name": "vllm-754bbd4bfd-w4hp7",
+    "pod_uid": "e9025a00-3a28-4140-80f9-956d5654a671",
+    "image": "safeboard-vllm:0.32.0",
+    "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+    "restart_count": 1,
+    "resources": {
+      "limits": {
+        "cpu": "10",
+        "memory": "12Gi"
+      },
+      "requests": {
+        "cpu": "8",
+        "memory": "8Gi"
+      }
+    },
+    "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+    "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+    "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+    "container_spec_sha256": "10f7ee3c298032d5e0b74113d1a0f80cd3646cdfa34aa50020e20be524af11c0"
+  },
+  "restart_runtime": {
+    "private_model_in_process_args": true,
+    "private_snapshot_valid": true,
+    "snapshot_files": [
+      "config.json",
+      "generation_config.json",
+      "merges.txt",
+      "model.safetensors",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ],
+    "snapshot_bytes": 3098955668,
+    "uid": 10001,
+    "pip_present": false,
+    "ensurepip_present": false
+  },
+  "restart_endpoint": {
+    "authentication": "passed",
+    "inference": "passed",
+    "private_content_absent_from_logs": "passed",
+    "success_and_error_requests_audited": "passed",
+    "output_tokens": 32
+  },
+  "same_pod_emptydir_reused": true,
+  "inference_restart": "intentional_SIGTERM",
+  "status": "passed",
+  "manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+  "private_storage": {
+    "volume": "inference-only emptyDir",
+    "size_limit": "4Gi",
+    "medium": "disk"
+  },
+  "offline_cache_check": {
+    "HF_HUB_OFFLINE": "1",
+    "cache_integrity": "sha256_verified",
+    "result": "passed"
+  },
+  "image_scan_summary": {
+    "inference": {
+      "image_id": "sha256:d8e3e5d894b76e77f296efc1eb72f377bd4ed5890ad029e509aa6de1cbd83c4c",
+      "scan_matches_final_image": true,
+      "python_cves": [
+        {
+          "package": "jaraco.context",
+          "id": "CVE-2026-23949"
+        },
+        {
+          "package": "setuptools",
+          "id": "CVE-2026-59890"
+        },
+        {
+          "package": "wheel",
+          "id": "CVE-2026-24049"
+        }
+      ],
+      "base_pip_cves_absent": true
+    },
+    "downloader": {
+      "image_id": "sha256:7432c9b7a8d726cd476a7a53fd84b99836c4d290c6d17bcb4df19a4146cd5a58",
+      "scan_matches_final_image": true,
+      "python_cves": [],
+      "base_pip_cves_absent": true
+    }
+  },
+  "test_results": {
+    "linux": {
+      "discovered": 48,
+      "passed": 48,
+      "skipped": 0
+    },
+    "windows": {
+      "discovered": 48,
+      "passed": 37,
+      "skipped": 11
+    }
+  },
+  "temporary_test_port": 18002,
+  "api_credential_absent_from_deliverables": true,
+  "final_cluster_state": "stopped",
+  "final_context": "safeboard",
+  "test_port_forward_stopped": true,
+  "context_restore_note": "After stopping the existing profile, its kubeconfig entry was absent. Restored references to existing Minikube CA/client files and original pre-test loopback endpoint; the next minikube start refreshes the dynamic endpoint."
+}

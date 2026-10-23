@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-10-23",
+  "linux": {
+    "discovered": 48,
+    "passed": 48,
+    "skipped": 0,
+    "network": "none",
+    "user": "10001:10001",
+    "image": "safeboard-downloader:1.3",
+    "filesystem": "read-only; /tmp tmpfs"
+  },
+  "windows": {
+    "discovered": 48,
+    "passed": 37,
+    "skipped": 11,
+    "skip_reason": "POSIX downloader and symlink tests run on Linux"
+  },
+  "deployment_control_flow": "passed with mocked external commands",
+  "deployment_integration": "passed with KUBE_CONTEXT=review-should-not-be-used; existing PVC"
+}

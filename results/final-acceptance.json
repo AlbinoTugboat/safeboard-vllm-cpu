@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-23",
+  "context": "safeboard-submission-1023",
+  "status": "passed",
+  "scope": "Final images, new Minikube profile and PVC, real download, API/privacy, Pod restart and cache reuse",
+  "docker_build_cache": "allowed",
+  "model_cache": "empty at start",
+  "no_pv_or_pvc_before_deploy": true,
+  "first": {
+    "snapshot": {
+      "context": "safeboard-submission-1023",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-69b5c558c-qmwlx",
+      "pod_uid": "49dace98-cfa6-4964-b120-ee72cb526013",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+      "restart_count": 0,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+      "container_spec_sha256": "10f7ee3c298032d5e0b74113d1a0f80cd3646cdfa34aa50020e20be524af11c0"
+    },
+    "init_events": [
+      {
+        "event": "model_download_started",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "event": "model_download_complete",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "integrity": "sha256_verified"
+      }
+    ],
+    "endpoint": {
+      "authentication": "passed",
+      "inference": "passed",
+      "private_content_absent_from_logs": "passed",
+      "success_and_error_requests_audited": "passed",
+      "output_tokens": 35
+    }
+  },
+  "pvc_uid": "a3556dff-4046-474e-bb12-2a29a3748ace",
+  "restart": {
+    "snapshot": {
+      "context": "safeboard-submission-1023",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-6f98876656-mmmbm",
+      "pod_uid": "ff402ded-9628-4c58-af82-38e9600d0fab",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+      "restart_count": 0,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+      "container_spec_sha256": "10f7ee3c298032d5e0b74113d1a0f80cd3646cdfa34aa50020e20be524af11c0"
+    },
+    "init_events": [
+      {
+        "event": "model_cache_hit",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "integrity": "sha256_verified"
+      }
+    ],
+    "endpoint": {
+      "authentication": "passed",
+      "inference": "passed",
+      "private_content_absent_from_logs": "passed",
+      "success_and_error_requests_audited": "passed",
+      "output_tokens": 33
+    }
+  },
+  "same_pvc_after_restart": true,
+  "automatic_container_restarts": 0,
+  "finished_at": "2026-10-23T16:36:25.259688+00:00"
+}

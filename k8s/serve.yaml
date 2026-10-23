@@ -1,0 +1,14 @@
+host: 0.0.0.0
+port: 8000
+served-model-name: safeboard-qwen
+dtype: bfloat16
+max-model-len: 4096
+max-num-seqs: 4
+max-num-batched-tokens: 1024
+kv-cache-memory-bytes: 2147483648
+enable-prefix-caching: true
+enable-chunked-prefill: true
+enforce-eager: true
+generation-config: vllm
+seed: 42
+trust-remote-code: false

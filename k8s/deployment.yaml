@@ -1,0 +1,104 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: safeboard-vllm
+  template:
+    metadata:
+      labels:
+        app: safeboard-vllm
+    spec:
+      automountServiceAccountToken: false
+      enableServiceLinks: false
+      terminationGracePeriodSeconds: 45
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        fsGroupChangePolicy: OnRootMismatch
+        seccompProfile:
+          type: RuntimeDefault
+      initContainers:
+        - name: download-model
+          image: safeboard-downloader:1.3
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef: {name: vllm-env}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+          resources:
+            requests: {cpu: 250m, memory: 256Mi}
+            limits: {cpu: '2', memory: 1Gi}
+          volumeMounts:
+            - {name: model-cache, mountPath: /models}
+            - {name: settings, mountPath: /config, readOnly: true}
+            - {name: hf-token, mountPath: /secrets, readOnly: true}
+            - {name: temp, mountPath: /tmp}
+      containers:
+        - name: inference
+          image: safeboard-vllm:0.32.0
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef: {name: vllm-env}
+          ports:
+            - {name: http, containerPort: 8000}
+          startupProbe:
+            httpGet: {path: /health, port: http}
+            failureThreshold: 90
+            periodSeconds: 5
+            timeoutSeconds: 3
+          readinessProbe:
+            httpGet: {path: /health, port: http}
+            periodSeconds: 5
+            timeoutSeconds: 3
+          livenessProbe:
+            httpGet: {path: /health, port: http}
+            periodSeconds: 30
+            timeoutSeconds: 10
+            failureThreshold: 6
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+          resources:
+            requests: {cpu: '8', memory: 8Gi}
+            limits: {cpu: '10', memory: 12Gi}
+          volumeMounts:
+            - {name: model-cache, mountPath: /models, readOnly: true}
+            - {name: verified-model, mountPath: /verified-model}
+            - {name: settings, mountPath: /config, readOnly: true}
+            - {name: api-token, mountPath: /secrets, readOnly: true}
+            - {name: temp, mountPath: /tmp}
+            - {name: shm, mountPath: /dev/shm}
+      volumes:
+        - name: verified-model
+          emptyDir: {sizeLimit: 4Gi}
+        - name: model-cache
+          persistentVolumeClaim: {claimName: model-cache}
+        - name: settings
+          configMap: {name: vllm-settings}
+        - name: hf-token
+          secret:
+            secretName: vllm-tokens
+            defaultMode: 0440
+            items:
+              - {key: hf-token, path: hf-token}
+        - name: api-token
+          secret:
+            secretName: vllm-tokens
+            defaultMode: 0440
+            items:
+              - {key: api-token, path: api-token}
+        - name: temp
+          emptyDir: {sizeLimit: 2Gi}
+        - name: shm
+          emptyDir: {medium: Memory, sizeLimit: 1Gi}

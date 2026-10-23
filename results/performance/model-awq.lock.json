@@ -1,0 +1,34 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct-AWQ",
+  "revision": "3ecffa0ceb27851800f45519bab9c457a04405e1",
+  "files": {
+    "config.json": {
+      "size": 838,
+      "sha256": "61cefa4671101141de551f7b46faa45dc792cba654848ee5bb8e55bebe8b6f5d"
+    },
+    "generation_config.json": {
+      "size": 242,
+      "sha256": "091fc0fd8cf33ecb3ded1399ffe17cca80fefdb167ac4c241c1ca42c6bc116e5"
+    },
+    "merges.txt": {
+      "size": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "model.safetensors": {
+      "size": 1614553840,
+      "sha256": "5b29ed6f80e422c3ae7d40dc76fd8983501bbd7489cf84a72a5c5fe20bcf2813"
+    },
+    "tokenizer.json": {
+      "size": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "size": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    "vocab.json": {
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  }
+}

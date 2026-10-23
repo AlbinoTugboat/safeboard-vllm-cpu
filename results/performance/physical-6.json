@@ -1,0 +1,166 @@
+{
+  "started_at_utc": "2026-10-21T11:46:52.832126+00:00",
+  "finished_at_utc": "2026-10-21T11:47:35.482108+00:00",
+  "local_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+  "config_hash_format": "sha256-utf8-lf-v1",
+  "kubernetes_evidence": {
+    "status": "pod_verified",
+    "before": {
+      "context": "safeboard",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-65d5694c6c-lwpbt",
+      "pod_uid": "864a53e6-b4f6-4ab4-839d-4b7d270a722b",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:cda156f6259ce6e3b5932cc5911183cf47c23691cc8e4e71a534857c905e8b0f",
+      "restart_count": 0,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+      "container_spec_sha256": "8cdfac1e75803526f68ad710e3a029ef2b4b16e1ea1e8748cf39e476404cfc72"
+    },
+    "after": {
+      "context": "safeboard",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-65d5694c6c-lwpbt",
+      "pod_uid": "864a53e6-b4f6-4ab4-839d-4b7d270a722b",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:cda156f6259ce6e3b5932cc5911183cf47c23691cc8e4e71a534857c905e8b0f",
+      "restart_count": 0,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+      "container_spec_sha256": "8cdfac1e75803526f68ad710e3a029ef2b4b16e1ea1e8748cf39e476404cfc72"
+    },
+    "binding_request_ids": [
+      "1d11d7efd34e44d5aff7422033ee3ecd",
+      "0a03dc381ff84ee39f0e06e6778cfa80"
+    ]
+  },
+  "notes": "Fixed prompts; unique per-request cache_salt; warmups excluded. Client TPOT=(latency-TTFT)/(output_tokens-1). Decode rate is per stream, not aggregate throughput.",
+  "cases": [
+    {
+      "prompt": "short",
+      "concurrency": 1,
+      "requests": 4,
+      "prompt_tokens_mean": 43,
+      "output_tokens_each": 128,
+      "ttft_mean_s": 0.1140190750002148,
+      "ttft_p95_s": 0.12784409999949276,
+      "latency_mean_s": 8.763210300000537,
+      "latency_p95_s": 8.773170200001914,
+      "tpot_mean_s": 0.06810386791338836,
+      "decode_tokens_per_s_mean": 14.683522823332613,
+      "output_tokens_per_s": 14.606153153536955,
+      "wall_s": 35.053719800002
+    }
+  ],
+  "raw_cases": [
+    {
+      "prompt": "short",
+      "concurrency": 1,
+      "prompt_sha256": [
+        "f97887eb175647acbfc9566a79da2763aa8f01e8b44a70fb5b9a7bd04fad6f44",
+        "2b1bddd7329f3654f3b2bc2e30c24ada6bdfc9cd02b7058b61779f020a50fcc6",
+        "707e12123768837d2ba1d30a7f4857e25b18d90eff57e01215548e407740aec3",
+        "b31f7006725d3ce9b26f9bccde6063886bac33fc18e6783d4955df55f13e2c10"
+      ],
+      "measurements": [
+        {
+          "ttft_s": 0.12408349999896018,
+          "latency_s": 8.763856699999451,
+          "tpot_s": 0.06802971023622434,
+          "decode_tokens_per_s": 14.69945993489653,
+          "prompt_tokens": 43,
+          "output_tokens": 128
+        },
+        {
+          "ttft_s": 0.12784409999949276,
+          "latency_s": 8.750888300000952,
+          "tpot_s": 0.06789798582678314,
+          "decode_tokens_per_s": 14.72797738877165,
+          "prompt_tokens": 43,
+          "output_tokens": 128
+        },
+        {
+          "ttft_s": 0.09751200000027893,
+          "latency_s": 8.764925999999832,
+          "tpot_s": 0.06824735433070514,
+          "decode_tokens_per_s": 14.65258265037375,
+          "prompt_tokens": 43,
+          "output_tokens": 128
+        },
+        {
+          "ttft_s": 0.10663670000212733,
+          "latency_s": 8.773170200001914,
+          "tpot_s": 0.06824042125984084,
+          "decode_tokens_per_s": 14.654071319288517,
+          "prompt_tokens": 43,
+          "output_tokens": 128
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "name": "physical-6",
+    "threads": 6,
+    "binding": "0,2,4,6,8,10",
+    "image": "safeboard-vllm:0.32.0",
+    "runtime": {
+      "cpu_platform": "CpuPlatform",
+      "omp_threads": "6",
+      "mkl_threads": "6",
+      "binding": "0,2,4,6,8,10",
+      "cpu_max": "1000000 100000",
+      "engine_threads": [
+        {
+          "name": "VLLM::EngineCor",
+          "thread_affinity_counts": {
+            "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15": 13
+          }
+        },
+        {
+          "name": "VLLM::Worker",
+          "thread_affinity_counts": {
+            "0": 46,
+            "2": 1,
+            "4": 1,
+            "6": 1,
+            "8": 1,
+            "10": 1
+          }
+        }
+      ]
+    }
+  },
+  "cpu_stat_after": {
+    "usage_usec": "320044943",
+    "user_usec": "289205289",
+    "system_usec": "30839654",
+    "nice_usec": "0",
+    "nr_periods": "916",
+    "nr_throttled": "0",
+    "throttled_usec": "0",
+    "nr_bursts": "0",
+    "burst_usec": "0"
+  }
+}

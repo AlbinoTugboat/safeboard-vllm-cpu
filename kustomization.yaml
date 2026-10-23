@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: safeboard-llm
+resources:
+  - k8s/namespace.yaml
+  - k8s/deployment.yaml
+  - k8s/service.yaml
+  - k8s/pvc.yaml
+configMapGenerator:
+  - name: vllm-settings
+    files:
+      - model.lock.json
+      - k8s/serve.yaml
+  - name: vllm-env
+    envs:
+      - k8s/runtime.env

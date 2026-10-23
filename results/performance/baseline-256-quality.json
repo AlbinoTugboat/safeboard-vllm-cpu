@@ -1,0 +1,140 @@
+{
+  "label": "baseline-256",
+  "passed": 9,
+  "total": 12,
+  "scope": "12 synthetic factual, arithmetic and formatting checks; not a general accuracy benchmark",
+  "kubernetes_evidence": {
+    "status": "pod_verified",
+    "before": {
+      "context": "safeboard",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-58574cdcf8-kn4vm",
+      "pod_uid": "ede1f1a9-6d68-475b-b7d3-044fad063326",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:cda156f6259ce6e3b5932cc5911183cf47c23691cc8e4e71a534857c905e8b0f",
+      "restart_count": 0,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+      "container_spec_sha256": "7698d1ce6ac08ef311de4d5966bb9a3fee4daf4ecaaf47ecac0ff9f1e8751e07"
+    },
+    "after": {
+      "context": "safeboard",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-58574cdcf8-kn4vm",
+      "pod_uid": "ede1f1a9-6d68-475b-b7d3-044fad063326",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:cda156f6259ce6e3b5932cc5911183cf47c23691cc8e4e71a534857c905e8b0f",
+      "restart_count": 0,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "4eaa162dd342eeff09ac825979b10594f70bf6520b158c88bffce0caa88214f5",
+      "container_spec_sha256": "7698d1ce6ac08ef311de4d5966bb9a3fee4daf4ecaaf47ecac0ff9f1e8751e07"
+    },
+    "binding_request_ids": [
+      "e81c077ece024f8f957d5d98a52bee8c",
+      "3def6d71f96c4e859c6ae85c14dc8ed3"
+    ]
+  },
+  "cases": [
+    {
+      "case": "addition",
+      "expected": "42",
+      "answer": "42",
+      "passed": true
+    },
+    {
+      "case": "multiplication",
+      "expected": "156",
+      "answer": "156",
+      "passed": true
+    },
+    {
+      "case": "subtraction",
+      "expected": "63",
+      "answer": "63",
+      "passed": true
+    },
+    {
+      "case": "square_root",
+      "expected": "12",
+      "answer": "12",
+      "passed": true
+    },
+    {
+      "case": "precedence",
+      "expected": "23",
+      "answer": "23",
+      "passed": true
+    },
+    {
+      "case": "word_problem",
+      "expected": "8",
+      "answer": "1",
+      "passed": false
+    },
+    {
+      "case": "france",
+      "expected": "Paris",
+      "answer": "Paris",
+      "passed": true
+    },
+    {
+      "case": "japan",
+      "expected": "Tokyo",
+      "answer": "Tokyo",
+      "passed": true
+    },
+    {
+      "case": "russian",
+      "expected": "Париж",
+      "answer": "Париж",
+      "passed": true
+    },
+    {
+      "case": "extraction",
+      "expected": "AX-731",
+      "answer": "AX-731",
+      "passed": true
+    },
+    {
+      "case": "json",
+      "expected": {
+        "ok": true,
+        "count": 3
+      },
+      "answer": "```json\n{\"ok\":true,\"count\":3}\n```",
+      "passed": false
+    },
+    {
+      "case": "sorting",
+      "expected": [
+        2,
+        5,
+        9
+      ],
+      "answer": "```json\n[2, 5, 9]\n```",
+      "passed": false
+    }
+  ]
+}

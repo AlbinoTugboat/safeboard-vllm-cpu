@@ -1,0 +1,2 @@
+# CPU-only vLLM wheel published by the upstream project.
+vllm @ https://github.com/vllm-project/vllm/releases/download/v0.32.0/vllm-0.32.0%2Bcpu-cp38-abi3-manylinux_2_39_x86_64.whl

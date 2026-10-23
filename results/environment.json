@@ -1,0 +1,40 @@
+{
+  "checked_on": "2026-10-21",
+  "vllm": "0.32.0",
+  "torch": "2.13.0+cpu",
+  "python": "3.12.15",
+  "platform": "cpu",
+  "cuda": null,
+  "run_as_uid": 10001,
+  "omp_threads": 8,
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "kv_cache_bytes": 2147483648,
+  "cluster": {
+    "cpus": 12,
+    "memory_gib": 16
+  },
+  "pod": {
+    "name": "vllm-7f74dd6d7d-n6kmh",
+    "uid": "74a48ea6-4e7c-440d-8981-4d1c15d3b5a0",
+    "ready": true,
+    "restarts": 0,
+    "image_id": "sha256:cda156f6259ce6e3b5932cc5911183cf47c23691cc8e4e71a534857c905e8b0f"
+  },
+  "images": [
+    {
+      "bytes": 4661923845,
+      "docker_image_id": "sha256:6cfcd3bec252942d13e0b2cbbdc377dc183ae4ae4e8defbdb681be5c2404b7ab",
+      "user": "10001:10001",
+      "tag": "safeboard-vllm:0.32.0"
+    },
+    {
+      "bytes": 216630018,
+      "docker_image_id": "sha256:4b7814423fd9d8ab682cf66e0a711a8e2caf4c82c5c7e3dd622f2ae07486334e",
+      "user": "10001:10001",
+      "tag": "safeboard-downloader:1.2"
+    }
+  ],
+  "unit_tests_passed": 26,
+  "source_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+  "source_manifest_hash_format": "sha256-canonical-json-v1"
+}
