@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "before": {
+    "context": "safeboard",
+    "namespace": "safeboard-llm",
+    "pod_name": "vllm-685d8c5b9b-7ctxj",
+    "pod_uid": "c32b7af2-af8e-46f1-bd01-8ea61bbef380",
+    "image": "safeboard-vllm:0.32.0",
+    "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+    "restart_count": 2,
+    "resources": {
+      "limits": {
+        "cpu": "10",
+        "memory": "12Gi"
+      },
+      "requests": {
+        "cpu": "8",
+        "memory": "8Gi"
+      }
+    },
+    "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+    "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+    "config_maps_sha256": "a1c9676dd0f004f0c519dd2fb2cb452c298ab155cafb69460ab03eb1b78f07d4",
+    "container_spec_sha256": "49cc40cf46ca945374e942b744c1f6c04e7af37cc79856b982b33e9f2fc9a548"
+  },
+  "after": {
+    "context": "safeboard",
+    "namespace": "safeboard-llm",
+    "pod_name": "vllm-7465846d48-8h7dg",
+    "pod_uid": "99cb3bd7-7810-48ac-8fb8-6aecd4491f7f",
+    "image": "safeboard-vllm:0.32.0",
+    "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+    "restart_count": 0,
+    "resources": {
+      "limits": {
+        "cpu": "10",
+        "memory": "12Gi"
+      },
+      "requests": {
+        "cpu": "8",
+        "memory": "8Gi"
+      }
+    },
+    "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+    "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+    "config_maps_sha256": "a1c9676dd0f004f0c519dd2fb2cb452c298ab155cafb69460ab03eb1b78f07d4",
+    "container_spec_sha256": "49cc40cf46ca945374e942b744c1f6c04e7af37cc79856b982b33e9f2fc9a548"
+  },
+  "same_pvc_uid": "c31f40a8-6cc4-4b87-9d63-667f9c1660d9",
+  "cache_hit_without_download": true,
+  "endpoint": {
+    "authentication": "passed",
+    "inference": "passed",
+    "private_content_absent_from_logs": "passed",
+    "success_and_error_requests_audited": "passed",
+    "output_tokens": 31
+  },
+  "runtime": {
+    "private_snapshot_valid": true,
+    "uid": 10001,
+    "omp": "7",
+    "mkl": "7",
+    "binding": "auto"
+  }
+}

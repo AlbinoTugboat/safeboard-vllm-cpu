@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "requested_seconds": 1200,
+  "wall_seconds": 1217.5690442,
+  "requests": 290,
+  "failures": 0,
+  "resource_samples": 81,
+  "max_sampled_cgroup_memory_gib": 8.516559600830078,
+  "container_lifetime_peak_cgroup_memory_gib": 8.519966125488281,
+  "anon_median_first_five_gib": 7.7154083251953125,
+  "anon_median_last_five_gib": 7.729560852050781,
+  "cpu_throttled_usec_delta": 0,
+  "memory_max_events_delta": 0,
+  "oom_delta": {
+    "oom": 0,
+    "oom_kill": 0
+  },
+  "restart_count_unchanged": true,
+  "health_samples_passed": true,
+  "input_token_max": 3752
+}

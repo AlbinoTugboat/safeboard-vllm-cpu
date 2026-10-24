@@ -1,0 +1,7 @@
+{
+  "authentication": "passed",
+  "inference": "passed",
+  "private_content_absent_from_logs": "passed",
+  "success_and_error_requests_audited": "passed",
+  "output_tokens": 34
+}

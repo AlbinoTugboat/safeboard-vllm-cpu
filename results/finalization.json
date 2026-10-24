@@ -1,24 +1,39 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "author": "Чураков Н.М.",
   "repository": "https://github.com/AlbinoTugboat/safeboard-vllm-cpu",
   "status": "passed",
   "linux_tests": {
-    "passed": 48,
+    "passed": 51,
     "skipped": 0
   },
-  "final_clean_install": "passed; results/final-acceptance.json",
-  "kustomize_render": "passed",
-  "python_syntax_files": 19,
-  "json_files_parsed_before_finalization": 29,
+  "windows_tests": {
+    "passed": 40,
+    "skipped": 11
+  },
+  "python_syntax_files": 21,
   "secret_scan": {
     "tool": "Trivy 0.76.1",
     "findings": 0
   },
-  "scope": "Local CPU Minikube submission; all mandatory requirements and three bonuses implemented",
-  "remaining_risks": "See REPORT.md and results/security-fixes.md; benchmark is from 2026-10-21",
-  "build_reproducibility": "Pinned Python/model/base images; Docker build cache allowed; apt inputs are mutable",
-  "temporary_profile_removed": true,
-  "original_profile": "safeboard: stopped",
-  "runtime_secrets_or_weights_in_submission": false
+  "selected_runtime": {
+    "threads": 7,
+    "binding": "auto",
+    "batched_tokens": 1024
+  },
+  "confirmation": "ABBA; 24 requests per case and variant; 64 output tokens; performance-2026-10-23/summary.json",
+  "sustained_load": {
+    "started_at_utc": "2026-10-24T06:20:38.671601+00:00",
+    "finished_at_utc": "2026-10-24T06:41:17.799368+00:00",
+    "duration_requested_s": 1200,
+    "requests": 290,
+    "failures": 0,
+    "status": "passed"
+  },
+  "restart_after_load": "passed; same PVC, verified local cache and private snapshot, API/privacy passed",
+  "cluster_stop_start_after_load": "passed; same PVC, cached startup, no extra startup retries, API/privacy passed; initial resume failure not reproduced",
+  "clean_install": "Final images/model passed empty-PVC download on 2026-10-23 before CPU tuning; final CPU settings separately passed startup/load/restart",
+  "build_reproducibility": "Pinned Python/model/base images; build cache allowed; apt inputs remain mutable",
+  "remaining_risks": "REPORT.md and results/security-fixes.md; 20-minute test is not proof of long-term production reliability",
+  "secrets_or_model_weights_in_submission": false
 }

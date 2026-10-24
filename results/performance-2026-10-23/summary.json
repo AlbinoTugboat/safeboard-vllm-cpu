@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-23",
+  "status": "passed",
+  "comparison_order": [
+    "baseline",
+    "candidate",
+    "candidate",
+    "baseline"
+  ],
+  "requests_per_case_per_variant": 24,
+  "output_tokens_each": 64,
+  "screening_cases_not_pooled": true,
+  "selected": {
+    "threads": 7,
+    "binding": "auto",
+    "batched_tokens": 1024
+  },
+  "candidate_adopted": true,
+  "geometric_throughput_ratio": 1.3392727848798713,
+  "per_case_throughput_ratio": [
+    1.415567373915378,
+    1.54676387352815,
+    1.262336721428977,
+    1.1639823481779024
+  ],
+  "baseline": [
+    {
+      "prompt": "short",
+      "concurrency": 1,
+      "requests": 24,
+      "prompt_tokens_mean": 43,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 0.23199915834023463,
+      "ttft_p95_s": 0.24757969999336638,
+      "latency_mean_s": 6.2806585916720605,
+      "latency_p95_s": 6.339032500021858,
+      "decode_tokens_per_s_mean": 10.415801538192454,
+      "output_tokens_per_s": 10.189832161556575,
+      "block_throughputs": [
+        10.184273178021947,
+        10.19539721703651
+      ]
+    },
+    {
+      "prompt": "short",
+      "concurrency": 4,
+      "requests": 24,
+      "prompt_tokens_mean": 43,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 0.4446445499973682,
+      "ttft_p95_s": 0.5174610000103712,
+      "latency_mean_s": 7.161061937496318,
+      "latency_p95_s": 7.1992961000069045,
+      "decode_tokens_per_s_mean": 9.381341963708133,
+      "output_tokens_per_s": 35.69277776162662,
+      "block_throughputs": [
+        35.7844711367921,
+        35.60155309180708
+      ]
+    },
+    {
+      "prompt": "long",
+      "concurrency": 1,
+      "requests": 24,
+      "prompt_tokens_mean": 1717,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 2.1087246624980858,
+      "ttft_p95_s": 2.146711499983212,
+      "latency_mean_s": 8.214511050001116,
+      "latency_p95_s": 8.263434599997709,
+      "decode_tokens_per_s_mean": 10.318215108234531,
+      "output_tokens_per_s": 7.790988738824879,
+      "block_throughputs": [
+        7.79633273725347,
+        7.785652061468455
+      ]
+    },
+    {
+      "prompt": "long",
+      "concurrency": 4,
+      "requests": 24,
+      "prompt_tokens_mean": 1717,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 3.8649379874974934,
+      "ttft_p95_s": 8.117080199997872,
+      "latency_mean_s": 14.743268512498616,
+      "latency_p95_s": 18.7367438999936,
+      "decode_tokens_per_s_mean": 5.9515537692212686,
+      "output_tokens_per_s": 17.242469235375367,
+      "block_throughputs": [
+        17.26700350633378,
+        17.2180045858074
+      ]
+    }
+  ],
+  "candidate": [
+    {
+      "prompt": "short",
+      "concurrency": 1,
+      "requests": 24,
+      "prompt_tokens_mean": 43,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 0.11820147917145125,
+      "ttft_p95_s": 0.13566830000490882,
+      "latency_mean_s": 4.436813145834701,
+      "latency_p95_s": 4.4879593000223394,
+      "decode_tokens_per_s_mean": 14.588506234193334,
+      "output_tokens_per_s": 14.424393953573102,
+      "block_throughputs": [
+        14.386559114373014,
+        14.462428319230016
+      ]
+    },
+    {
+      "prompt": "short",
+      "concurrency": 4,
+      "requests": 24,
+      "prompt_tokens_mean": 43,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 0.2537388749976041,
+      "ttft_p95_s": 0.3105349999968894,
+      "latency_mean_s": 4.627131308329505,
+      "latency_p95_s": 4.697754399996484,
+      "decode_tokens_per_s_mean": 14.408479774214074,
+      "output_tokens_per_s": 55.208299187553,
+      "block_throughputs": [
+        55.20119455389407,
+        55.2154056502418
+      ]
+    },
+    {
+      "prompt": "long",
+      "concurrency": 1,
+      "requests": 24,
+      "prompt_tokens_mean": 1717,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 2.0979621250019895,
+      "ttft_p95_s": 2.149886700004572,
+      "latency_mean_s": 6.507359541668848,
+      "latency_p95_s": 6.602626399981091,
+      "decode_tokens_per_s_mean": 14.289000018206556,
+      "output_tokens_per_s": 9.834851181258278,
+      "block_throughputs": [
+        9.78648790039023,
+        9.883694843519603
+      ]
+    },
+    {
+      "prompt": "long",
+      "concurrency": 4,
+      "requests": 24,
+      "prompt_tokens_mean": 1717,
+      "output_tokens_each": 64,
+      "ttft_mean_s": 3.8955944208331252,
+      "ttft_p95_s": 8.108660300000338,
+      "latency_mean_s": 12.68115410417037,
+      "latency_p95_s": 16.640789199998835,
+      "decode_tokens_per_s_mean": 7.528412292788052,
+      "output_tokens_per_s": 20.06992982897746,
+      "block_throughputs": [
+        20.128142780822817,
+        20.012052623495382
+      ]
+    }
+  ],
+  "notes": "Two independent Pod lifetimes per variant, ABBA order. Identical prompts and output budget; unique cache salts. Warmups excluded. p95 nearest rank. Small local sample; no production SLO or global optimum claimed."
+}

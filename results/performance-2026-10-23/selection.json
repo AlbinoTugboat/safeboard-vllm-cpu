@@ -1,0 +1,9 @@
+{
+  "phase": "screening",
+  "selected": {
+    "threads": 7,
+    "binding": "auto",
+    "batched_tokens": 1024
+  },
+  "selection_rule": "Geometric mean throughput across four cases; prefer auto within 5%; accept batch2048 only above 5% gain with no mean latency regression over 10%. Confirmation follows."
+}

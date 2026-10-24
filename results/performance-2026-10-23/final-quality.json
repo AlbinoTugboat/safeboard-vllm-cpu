@@ -1,0 +1,140 @@
+{
+  "label": "final-optimized",
+  "passed": 9,
+  "total": 12,
+  "scope": "12 synthetic factual, arithmetic and formatting checks; not a general accuracy benchmark",
+  "kubernetes_evidence": {
+    "status": "pod_verified",
+    "before": {
+      "context": "safeboard",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-685d8c5b9b-7ctxj",
+      "pod_uid": "c32b7af2-af8e-46f1-bd01-8ea61bbef380",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+      "restart_count": 2,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "a1c9676dd0f004f0c519dd2fb2cb452c298ab155cafb69460ab03eb1b78f07d4",
+      "container_spec_sha256": "49cc40cf46ca945374e942b744c1f6c04e7af37cc79856b982b33e9f2fc9a548"
+    },
+    "after": {
+      "context": "safeboard",
+      "namespace": "safeboard-llm",
+      "pod_name": "vllm-685d8c5b9b-7ctxj",
+      "pod_uid": "c32b7af2-af8e-46f1-bd01-8ea61bbef380",
+      "image": "safeboard-vllm:0.32.0",
+      "image_id": "sha256:683acb45cd8628675bd307114e23e68e1258a27ef438d68392bf5eaf93607a0e",
+      "restart_count": 2,
+      "resources": {
+        "limits": {
+          "cpu": "10",
+          "memory": "12Gi"
+        },
+        "requests": {
+          "cpu": "8",
+          "memory": "8Gi"
+        }
+      },
+      "serve_config_sha256": "7626bc512295f369c2d2c8d5658bca5850d63df5a176f63c7a3b59d33a121a5c",
+      "model_manifest_sha256": "82307f6a1192bb10cc6cae2e8ca1197ce760d99e1bbf91fc08370facecaac567",
+      "config_maps_sha256": "a1c9676dd0f004f0c519dd2fb2cb452c298ab155cafb69460ab03eb1b78f07d4",
+      "container_spec_sha256": "49cc40cf46ca945374e942b744c1f6c04e7af37cc79856b982b33e9f2fc9a548"
+    },
+    "binding_request_ids": [
+      "8e227e7db7544685affbea0234653661",
+      "3186e10ef0a04585852a16a6704b796c"
+    ]
+  },
+  "cases": [
+    {
+      "case": "addition",
+      "expected": "42",
+      "answer": "42",
+      "passed": true
+    },
+    {
+      "case": "multiplication",
+      "expected": "156",
+      "answer": "156",
+      "passed": true
+    },
+    {
+      "case": "subtraction",
+      "expected": "63",
+      "answer": "63",
+      "passed": true
+    },
+    {
+      "case": "square_root",
+      "expected": "12",
+      "answer": "12",
+      "passed": true
+    },
+    {
+      "case": "precedence",
+      "expected": "23",
+      "answer": "23",
+      "passed": true
+    },
+    {
+      "case": "word_problem",
+      "expected": "8",
+      "answer": "1",
+      "passed": false
+    },
+    {
+      "case": "france",
+      "expected": "Paris",
+      "answer": "Paris",
+      "passed": true
+    },
+    {
+      "case": "japan",
+      "expected": "Tokyo",
+      "answer": "Tokyo",
+      "passed": true
+    },
+    {
+      "case": "russian",
+      "expected": "Париж",
+      "answer": "Париж",
+      "passed": true
+    },
+    {
+      "case": "extraction",
+      "expected": "AX-731",
+      "answer": "AX-731",
+      "passed": true
+    },
+    {
+      "case": "json",
+      "expected": {
+        "ok": true,
+        "count": 3
+      },
+      "answer": "```json\n{\"ok\":true,\"count\":3}\n```",
+      "passed": false
+    },
+    {
+      "case": "sorting",
+      "expected": [
+        2,
+        5,
+        9
+      ],
+      "answer": "```json\n[2, 5, 9]\n```",
+      "passed": false
+    }
+  ]
+}

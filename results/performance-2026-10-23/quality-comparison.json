@@ -1,0 +1,7 @@
+{
+  "baseline_passed": 9,
+  "selected_passed": 9,
+  "total": 12,
+  "previously_passing_cases_preserved": true,
+  "scope": "12 deterministic synthetic smoke cases; not general accuracy"
+}

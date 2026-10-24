@@ -1,8 +1,8 @@
 {
   "checked_on": "2026-10-23",
   "linux": {
-    "discovered": 48,
-    "passed": 48,
+    "discovered": 51,
+    "passed": 51,
     "skipped": 0,
     "network": "none",
     "user": "10001:10001",
@@ -10,11 +10,12 @@
     "filesystem": "read-only; /tmp tmpfs"
   },
   "windows": {
-    "discovered": 48,
-    "passed": 37,
+    "discovered": 51,
+    "passed": 40,
     "skipped": 11,
     "skip_reason": "POSIX downloader and symlink tests run on Linux"
   },
   "deployment_control_flow": "passed with mocked external commands",
-  "deployment_integration": "passed with KUBE_CONTEXT=review-should-not-be-used; existing PVC"
+  "deployment_integration": "passed with KUBE_CONTEXT=review-should-not-be-used; existing PVC",
+  "sustained_load_instrumentation": "3 new summary regression tests; successful checkpoint path exercised by real 20-minute run"
 }
