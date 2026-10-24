@@ -1,6 +1,6 @@
 {
   "date": "2026-10-24",
-  "author": "Р§СѓСЂР°РєРѕРІ Рќ.Рњ.",
+  "author": "Р В§РЎС“РЎР‚Р В°Р С”Р С•Р Р† Р Сњ.Р Сљ.",
   "repository": "https://github.com/AlbinoTugboat/safeboard-vllm-cpu",
   "status": "passed",
   "linux_tests": {
@@ -38,14 +38,17 @@
   "secrets_or_model_weights_in_submission": false,
   "documentation_revision": {
     "date": "2026-10-24",
-    "deployment": "Direct Docker/Minikube preparation and kubectl apply -k .; deployment wrapper removed",
+    "primary_document": "REPORT.md and matching Word report; README is a short index",
+    "word_pages": 8,
+    "deployment": "Direct Docker/Minikube preparation and kubectl apply -k .",
     "checks": [
       "Kustomize render",
-      "11 PowerShell blocks parsed",
+      "14 PowerShell blocks parsed",
       "relative links checked",
-      "Word rendered and both pages visually inspected"
+      "246 source text items present in Word",
+      "all 8 rendered pages visually inspected"
     ],
     "runtime_changes": false,
-    "runtime_test_results": "Existing measurements retained; no runtime tests rerun for the editorial revision"
+    "runtime_test_results": "Existing measurements retained; no runtime tests rerun for the documentation revision"
   }
 }
