@@ -1,6 +1,6 @@
 {
   "date": "2026-10-24",
-  "author": "Чураков Н.М.",
+  "author": "Р§СѓСЂР°РєРѕРІ Рќ.Рњ.",
   "repository": "https://github.com/AlbinoTugboat/safeboard-vllm-cpu",
   "status": "passed",
   "linux_tests": {
@@ -35,5 +35,17 @@
   "clean_install": "Final images/model passed empty-PVC download on 2026-10-23 before CPU tuning; final CPU settings separately passed startup/load/restart",
   "build_reproducibility": "Pinned Python/model/base images; build cache allowed; apt inputs remain mutable",
   "remaining_risks": "REPORT.md and results/security-fixes.md; 20-minute test is not proof of long-term production reliability",
-  "secrets_or_model_weights_in_submission": false
+  "secrets_or_model_weights_in_submission": false,
+  "documentation_revision": {
+    "date": "2026-10-24",
+    "deployment": "Direct Docker/Minikube preparation and kubectl apply -k .; deployment wrapper removed",
+    "checks": [
+      "Kustomize render",
+      "11 PowerShell blocks parsed",
+      "relative links checked",
+      "Word rendered and both pages visually inspected"
+    ],
+    "runtime_changes": false,
+    "runtime_test_results": "Existing measurements retained; no runtime tests rerun for the editorial revision"
+  }
 }

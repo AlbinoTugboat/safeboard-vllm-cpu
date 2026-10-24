@@ -15,7 +15,10 @@
     "skipped": 11,
     "skip_reason": "POSIX downloader and symlink tests run on Linux"
   },
-  "deployment_control_flow": "passed with mocked external commands",
-  "deployment_integration": "passed with KUBE_CONTEXT=review-should-not-be-used; existing PVC",
-  "sustained_load_instrumentation": "3 new summary regression tests; successful checkpoint path exercised by real 20-minute run"
+  "sustained_load_instrumentation": "3 new summary regression tests; successful checkpoint path exercised by real 20-minute run",
+  "historical_deployment_checks_2026_10_23": {
+    "control_flow": "passed with mocked external commands",
+    "integration": "passed with KUBE_CONTEXT=review-should-not-be-used; existing PVC",
+    "scope": "Retired PowerShell deployment wrapper; current deployment uses direct Kubernetes commands"
+  }
 }
